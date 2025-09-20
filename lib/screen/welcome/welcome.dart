@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_app/home/home_view.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -45,7 +46,9 @@ class Welcome extends StatelessWidget {
                       color: Color(0xff5D577E)
                   ) ,),
                 SizedBox(height: 58,),
-                ElevatedButton(onPressed: (){},
+                ElevatedButton(onPressed: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomeView()));
+                },
                   child: Text("Let’s Continue",style: TextStyle(
                     fontSize: 15,
                     color: Colors.white,
